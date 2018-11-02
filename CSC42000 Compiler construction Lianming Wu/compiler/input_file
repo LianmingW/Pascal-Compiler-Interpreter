@@ -1,0 +1,25 @@
+PROGRAM TestProgram;
+VAR
+   {a,}a, b, c, x, d : INTEGER; { uncomment to get duplicate error} { get rid of a to get undeclared error}
+   y, ss        : REAL;
+   {comment section}
+BEGIN
+      BEGIN
+      END;
+      a := 2;
+      b := 0;
+      REPEAT
+      a := a+1;
+      {a := 1.1} {comment to get type error}
+      b := a
+      UNTIL a >= 5;
+      c := 2 % 3 * 5 * (3+5) DIV 8;
+      d := 5-(-5);
+      y := 5.5/3;
+      d := 5 * 5;
+      ss := 5.5;
+      BEGIN
+      d := 5
+      END;
+END.
+
